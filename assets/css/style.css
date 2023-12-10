@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+body {
+    font-family: 'Mitr', sans-serif;
+    font-size: 1.5vh;
+    font-weight: 300;
+
+    background: #1D2127;
+}
+
+header {
+    display: flex;
+    position: sticky;
+
+    padding: .5vh 1vh;
+
+    top: 0;
+
+    width: 100%;
+    height: 7vh;
+
+    background: #252930;
+    box-shadow: 0 .5vh 1vh rgba(0, 0, 0, .2);
+
+    z-index: 1;
+
+    & .logo {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+
+        transition: all .6s ease;
+
+        & a {
+            color: #D1D7E0;
+            font-size: 2.5vh;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+                color: #ED6CAD;
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+
+    padding: 10vh;
+
+    & .title {
+        position: relative;
+
+        color: #D1D7E0;
+        font-size: 2.5vh;
+    }
+
+    & .content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        gap: 3vh;
+
+        padding: 5vh 15vh;
+
+        width: 40%;
+
+        background: #252930;
+        border-radius: .5vh;
+
+        & .box {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 3vh;
+
+            width: 100%;
+
+            & .box-input {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                gap: 3vh;
+
+                & .input-group {
+                    display: flex;
+                    flex-direction: column;
+
+                    & label {
+                        font-family: 'Mitr', sans-serif;
+                        color: #D1D7E0;
+                        font-size: 1.75vh;
+                        font-weight: 300;
+
+                        & span:first-child {
+                            color: #AAAEB6;
+                        }
+
+                        & span:last-child {
+                            color: #DC3545;
+                        }
+                    }
+
+                    & input {
+                        padding: 1vh 0;
+
+                        font-family: 'Mitr', sans-serif;
+                        color: #AAAEB6;
+                        font-size: 1.75vh;
+                        font-weight: 200;
+
+                        background: transparent;
+                        border: none;
+                        border-bottom: .1vh solid #1D2127;
+
+                        transition: all .4s ease;
+
+                        &:focus {
+                            outline: none;
+                            border-bottom: .1vh solid #E85A98;
+                        }
+
+                        &::-webkit-inner-spin-button,
+                        &::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                        }
+                    }
+                }
+            }
+
+            & .box-result {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                gap: 3vh;
+
+                padding: 2vh 0;
+
+                background: #1D2127;
+                border-radius: .5vh;
+
+                & .result-group {
+                    display: flex;
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1vh;
+
+                    & p {
+                        color: #D1D7E0;
+                        font-size: 1.75vh;
+                    }
+
+                    & span {
+                        color: #AAAEB6;
+                        font-size: 1.5vh;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+
+        & .box-button {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            gap: 1vh;
+
+            width: 100%;
+
+            & button {
+                cursor: pointer;
+
+                padding: 1vh 0;
+
+                width: 100%;
+
+                font-family: 'Mitr', sans-serif;
+                font-size: 1.5vh;
+                font-weight: 300;
+                text-transform: uppercase;
+
+                border: none;
+                border-radius: .5vh;
+
+                transition: all .4s ease;
+            }
+
+            & button:first-child {
+                color: #D1D7E0;
+                background: #ED6CAD99;
+
+                &:hover {
+                    color: #EEE;
+                    background: #E85A98;
+                }
+            }
+
+            & button:last-child {
+                color: #AAAEB6;
+                background: #40435399;
+
+                &:hover {
+                    color: #EEE;
+                    background: #404353;
+                }
+            }
+        }
+    }
+
+    & table {
+        position: relative;
+        overflow: hidden;
+
+        width: 30%;
+
+        /* border-collapse: collapse; */
+        border-radius: .5vh;
+
+        & thead tr {
+            color: #D1D7E0;
+            font-size: 2vh;
+            text-align: left;
+            background: #1B1E24;
+        }
+
+        & th, td {
+            padding: 1vh;
+
+            font-family: 'Mitr', sans-serif;
+            font-weight: 300;
+        }
+
+        & tbody tr {
+            color: #AAAEB6;
+            font-size: 1.5vh;
+            text-align: left;
+            background: #252930;
+
+            &.active {
+                color: #ED6CAD;
+            }
+        }
+
+        & tbody tr:nth-of-type(even) {
+            background: #2D323B;
+        }
+
+        & tbody tr:last-of-type {
+            border-radius: 0 0 .5vh .5vh;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    position: relative;
+
+    padding: .5vh 1vh;
+
+    width: 100%;
+    height: 7vh;
+
+    background: #252930;
+
+    & .copy-right {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+
+        color: #AAAEB6;
+        font-size: 1.5vh;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- JS Lib -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <title>BMI</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <p>BMI</p>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="title">
+            <p>คำนวณหาค่าดัชนีมวลกาย</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="box-input">
+                    <div class="input-group">
+                        <label for="height">ส่วนสูง <span>(cm)</span> <span id="height-error"></span></label>
+                        <input type="number" id="height">
+                    </div>
+                    <div class="input-group">
+                        <label for="weight">น้ำหนัก <span>(kg)</span> <span id="weight-error"></span></label>
+                        <input type="number" id="weight">
+                    </div>
+                </div>
+                <div class="box-result">
+                    <div class="result-group">
+                        <p>BMI:</p>
+                        <span id="bmi-result"></span>
+                    </div>
+                    <div class="result-group">
+                        <p>อยู่ในเกณฑ์:</p>
+                        <span id="bmi-status"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box-button">
+                <button id="btn-calculate">คำนวณ</button>
+                <button id="btn-reset">รีเซ็ต</button>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>BMI</th>
+                    <th>อยู่ในเกณท์</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="bmi-1">
+                    <td>น้อยกว่า 18.50</td>
+                    <td>น้ำหนักน้อย / ผอม</td>
+                </tr>
+                <tr id="bmi-2">
+                    <td>ระหว่าง 18.50 - 22.90</td>
+                    <td>ปกติ (สุขภาพดี)</td>
+                </tr>
+                <tr id="bmi-3">
+                    <td>ระหว่าง 23 - 24.90</td>
+                    <td>ท้วม / โรคอ้วนระดับ 1</td>
+                </tr>
+                <tr id="bmi-4">
+                    <td>ระหว่าง 25 - 29.90</td>
+                    <td>อ้วน / โรคอ้วนระดับ 2</td>
+                </tr>
+                <tr id="bmi-5">
+                    <td>มากกว่า 30</td>
+                    <td>อ้วนมาก / โรคอ้วนระดับ 3</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <div class="copy-right">
+            <p>© 2023 Pawaret Tompa. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
